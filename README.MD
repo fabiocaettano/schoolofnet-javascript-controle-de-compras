@@ -2,7 +2,7 @@
 <h2>JavaScript Avançado</h2>
 <h3>Curso School Of Net</h3>
 
-1. Realizar download do bootstrap versão 3.
+<b>1. Realizar download do bootstrap versão 3.</b>
 
 Acessar o site https://getbootstrap.com/
 
@@ -20,7 +20,7 @@ Configurar o bootstap.min.css na página index.html:
 
 ```
 
-2. Configuração do NavBar e Titulo da Página
+<b>2. Configuração do NavBar e Titulo da Página</b>
 
 Arquivo course > js > config.js:
 
@@ -41,5 +41,39 @@ No final da tag body incluir a referencia ao arquivo config.js:
 <body>
     ...
     <script src="js/config.js"></script>
+</body>
+```
+
+<b>3. Definindo a lógica do aplicativo</b>
+
+A lista contpem quantidade e valor dos produtos.
+A função getSoma retorna o total da lista.
+
+Arquivo course > js > main.js:
+``` js
+var list = [
+    {"desc":"rice","amount":"1","value":"5.40"},
+    {"desc":"beer","amount":"12","value":"1.99"},
+    {"desc":"meat","amount":"1","value":"15.00"}
+];
+
+function getTotal(list){
+    var total = 0;
+    for(var key in list){
+        total += list[key].value * list[key].amount;
+    }
+    return total;
+}
+
+
+console.log(getTotal(list));
+```
+
+No final da tag body incluir a referencia ao arquivo config.js:
+``` html
+<body>
+    ...
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
 </body>
 ```
