@@ -3,7 +3,7 @@
 # Criação da Imagem e Container Docker
 
 # Declarar variaveis
-tag=v01
+tag=v02
 repositorio=fabiocaettano74
 imagem=controle-de-compras
 nomeDaImagem=web
