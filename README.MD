@@ -78,7 +78,7 @@ No final da tag body incluir a referencia ao arquivo config.js:
 </body>
 ```
 
-<b>3. Listando os dados</b>
+<b>4. Listando os dados</b>
 
 Código para popular a tabela:
 ``` js
@@ -89,5 +89,27 @@ function setList(list){
     }    
     table += '</tbody>';    
     document.getElementById("listTable").innerHTML = table;
+}
+```
+
+<br>
+<b>5. Formatando String e Valores</b>
+
+A função formatDesc configurar a primeira letra para Maisculo e as demais em minusuculas.
+``` js
+function formatDesc(desc){
+    var str = desc.toLowerCase();
+    str = str.charAt(0).toUpperCase() + str.slice(1);    
+    return str;
+}
+```
+
+A função formatValeu configura para moeda.
+``` js
+function formatValue(value){
+    var str = parseFloat(value).toFixed(2) + "";
+    str = str.replace(".",",");
+    str = "$ " + str;
+    return str;
 }
 ```
