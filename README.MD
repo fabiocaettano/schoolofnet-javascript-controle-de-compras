@@ -2,6 +2,7 @@
 <h2>JavaScript Avançado</h2>
 <h3>Curso School Of Net</h3>
 
+<br>
 <b>1. Realizar download do bootstrap versão 3.</b>
 
 Acessar o site https://getbootstrap.com/
@@ -20,6 +21,7 @@ Configurar o bootstap.min.css na página index.html:
 
 ```
 
+<br>
 <b>2. Configuração do NavBar e Titulo da Página</b>
 
 Arquivo course > js > config.js:
@@ -44,6 +46,7 @@ No final da tag body incluir a referencia ao arquivo config.js:
 </body>
 ```
 
+<br>
 <b>3. Definindo a lógica do aplicativo</b>
 
 A lista contpem quantidade e valor dos produtos.
@@ -78,6 +81,7 @@ No final da tag body incluir a referencia ao arquivo config.js:
 </body>
 ```
 
+<br>
 <b>4. Listando os dados</b>
 
 Código para popular a tabela:
@@ -113,3 +117,6 @@ function formatValue(value){
     return str;
 }
 ```
+
+<br>
+<b>6. Adicionando novos registros</b>
