@@ -6,6 +6,15 @@ O download deve ser customizado somente com os componentes do BootStrap e CSS, s
 
 Descompactar o arquivo, e copiar somente o arquivo bootstap.min.css. Salve este arquivo na pasta course/css.
 
+Configurar o bootstap.min.css na página index.html:
+``` html
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+```
 
 
 
