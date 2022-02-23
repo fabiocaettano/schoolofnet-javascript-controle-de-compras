@@ -16,5 +16,26 @@ Configurar o bootstap.min.css na página index.html:
 
 ```
 
+2. Configuração do NavBar e Titulo da Página
 
+Arquivo course > js > config.js:
 
+``` js
+function setConfig(){    
+    var texts = {
+        "title" : "Shopping Control"
+    };    
+    document.title = texts.title;
+    document.getElementById("navTitle").innerHTML = texts.title;
+}
+
+setConfig();
+```
+
+No final da tag body incluir a referencia ao arquivo config.js:
+``` html
+<body>
+    ...
+    <script src="js/config.js"></script>
+</body>
+```
