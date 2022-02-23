@@ -77,3 +77,17 @@ No final da tag body incluir a referencia ao arquivo config.js:
     <script src="js/main.js"></script>
 </body>
 ```
+
+<b>3. Listando os dados</b>
+
+Código para popular a tabela:
+``` js
+function setList(list){    
+    var table = '<thead><tr><td>Description</td><td>Amout</td><td>Value</td><td>Action</td></tr></thead><tbody>';
+    for(var  key in list){
+        table += '<tr><td>'+ list[key].desc +'</td><td>'+ list[key].amount +'</td><td>'+ list[key].value +'</td><td> Edit | Delete </td></tr>'
+    }    
+    table += '</tbody>';    
+    document.getElementById("listTable").innerHTML = table;
+}
+```
