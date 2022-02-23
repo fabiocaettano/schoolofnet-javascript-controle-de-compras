@@ -120,3 +120,32 @@ function formatValue(value){
 
 <br>
 <b>6. Adicionando novos registros</b>
+
+Trecho do form:
+``` html
+<div class="form-inline">
+    <div class="form-group"> 
+        <input type="text" class="form-control" id="desc" placeholder="Description"/>
+    </div>
+    <div class="form-group"> 
+        <input type="text" class="form-control" id="amount" placeholder="Amount"/>
+    </div>
+    <div class="form-group"> 
+        <input type="text" class="form-control" id="value" placeholder="Value"/>
+    </div>
+    <button onclick="addData();" class="btn btn-default">Add</button>
+</div>
+```
+
+Função que adiciona registros na lista:
+``` js
+function addData(){
+    var desc =  document.getElementById("desc").value;
+    var amount = document.getElementById("amount").value;
+    var value = document.getElementById("value").value;
+    
+    list.unshift({"desc":desc,"amount":amount,"value":value});
+    setList(list);
+
+}
+```
