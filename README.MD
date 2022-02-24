@@ -152,6 +152,7 @@ function addData(){
 <br>
 <b> 7. Editando registros </b>
 
+Trecho do formulário:
 ``` html
 <span id="btnUpdate" style="display: none;">
     <span id="inputIDUpdate">              
