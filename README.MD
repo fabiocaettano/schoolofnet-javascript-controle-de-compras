@@ -149,3 +149,29 @@ function addData(){
 
 }
 ```
+<br>
+<b> 7. Editando registros </b>
+
+``` html
+<span id="btnUpdate" style="display: none;">
+    <span id="inputIDUpdate">              
+    </span>
+    <button onclick="updateData()" class="btn btn-default">Save</button>
+    <button onclick="resetForm()" class="btn btn-default">Cancel</button>
+</span>
+```
+
+Função que atualiza as listas:
+``` js
+function updateData(){
+    var id = document.getElementById("idUpdate").value;
+    var desc = document.getElementById("desc").value;
+    var amount = document.getElementById("amount").value;
+    var value =  document.getElementById("value").value;
+
+    list[id] = {"desc":desc, "amount":amount, "value":value};
+
+    resetForm();
+    setList(list);
+}
+```
