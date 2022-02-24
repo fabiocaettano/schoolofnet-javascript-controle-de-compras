@@ -176,3 +176,27 @@ function updateData(){
     setList(list);
 }
 ```
+
+<br>
+<b>8. Excluindo registros</b>
+
+Excluindo itens da lista:
+``` js
+function deleteData(key){
+    if (confirm("Delete this item ?")){
+        if(key === list.length -1){
+            //exclui o ultimo registro do list
+            list.pop();
+        }else if(key === 0){
+            //exclui o primeiro registro do list
+            list.shift();
+        }else{
+            //exclui demais registros
+            var arrAuxIni = list.slice(0,key);
+            var arrAuxEnd = list.slice(key + 1);
+            list = arrAuxIni.concat(arrAuxEnd);
+        }
+        setList(list);
+    }
+}
+```

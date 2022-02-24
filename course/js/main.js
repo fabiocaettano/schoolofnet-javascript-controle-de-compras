@@ -15,7 +15,7 @@ function getTotal(list){
 function setList(list){    
     var table = '<thead><tr><td>Description</td><td>Amout</td><td>Value</td><td>Action</td></tr></thead><tbody>';
     for(var  key in list){
-        table += '<tr><td>'+ formatDesc(list[key].desc) +'</td><td>'+ list[key].amount +'</td><td>'+ formatValue(list[key].value) +'</td><td><button onclick="setUpdate('+key+')">Edit</button></td></tr>'
+        table += '<tr><td>'+ formatDesc(list[key].desc) +'</td><td>'+ list[key].amount +'</td><td>'+ formatValue(list[key].value) +'</td><td><button onclick="setUpdate('+key+')">Edit</button><button onclick="deleteData('+key+')">Delete</button></td></tr>'
     }    
     table += '</tbody>';    
     document.getElementById("listTable").innerHTML = table;
@@ -72,6 +72,25 @@ function updateData(){
 
     resetForm();
     setList(list);
+}
+
+function deleteData(key){
+    if (confirm("Delete this item ?")){
+        if(key === list.length -1){
+            //exclui o ultimo registro do list
+            list.pop();
+        }else if(key === 0){
+            //exclui o primeiro registro do list
+            list.shift();
+        }else{
+            var arrAuxIni = list.slice(0,key);
+            var arrAuxEnd = list.slice(key + 1);
+            list = arrAuxIni.concat(arrAuxEnd);
+        }
+
+        setList(list);
+    }
+
 }
 
 setList(list);
