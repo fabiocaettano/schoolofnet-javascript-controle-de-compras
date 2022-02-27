@@ -142,6 +142,13 @@ function validation(){
     }
 }
 
+function deleteList(){
+    if (confirm("Delete this list ?")){
+        list = [];
+        setList(list);
+    }
+}
+
 setList(list);
 
 //console.log(getTotal(list));
