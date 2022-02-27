@@ -265,3 +265,35 @@ function getTotal(list){
     document.getElementById("totalValue").innerHTML = formatValue(total);
 }
 ```
+
+<br>
+<b>11. LocalStorage </b>
+
+Quanto utilizar a função setList a função saveListStorage será acionada.
+Entoa a função saveListStorage ficará dentro da função setList.
+``` js
+function saveListStorage(list){
+    var jsonStr = JSON.stringify(list);
+    localStorage.setItem("list",jsonStr);
+}
+```
+
+A função de inicialização do local stoarge:
+``` js
+function initListStorage(){
+    var testList = localStorage.getItem("list");
+    if(testList){
+        list = JSON.parse(testList);
+    }
+    setList(list);
+}
+```
+
+A função initListStorage subsitui a setList no final do arquivo:
+``` js
+initListStorage();
+
+//setList(list);
+```
+
+No Browser Edge para visualizar o LocalStorage, clicar com o botão direito no browser e utilizar a opção Inspecionar >>  Depois o botão "More Tabs" >> Aplicativo >> Armazenamento Local.
