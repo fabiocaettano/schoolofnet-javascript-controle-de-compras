@@ -243,3 +243,25 @@ function validation(){
     }
 }
 ```
+<br>
+<b>10. Get Total</b>
+
+Nab bar:
+``` html
+<nav class="navbar navbar-default navbar-fixed-bottom"> 
+    <div class="container">
+     <h4 class="text-center text-sucess">Total: <span id="totalValue">$ 0,00</span></h4>
+    </div>
+</nav>
+```
+
+Totalizador:
+``` js
+function getTotal(list){
+    var total = 0;
+    for(var key in list){
+        total += list[key].value * list[key].amount;
+    }
+    document.getElementById("totalValue").innerHTML = formatValue(total);
+}
+```
